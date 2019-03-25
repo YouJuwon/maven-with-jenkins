@@ -29,18 +29,18 @@ public class SampleController {
         int userMoney = 10000;
         int totalPrice = 0;
 //        int calcMoney = calcUserMoney(userMoney, totalPrice);
-//        System.out.println("userMoney: " + userMoney + ", totalPrice: " + totalPrice);
-//        System.out.println("after calculate");
-//        System.out.println("price: " + calcMoney);
+//        log.debug("userMoney: " + userMoney + ", totalPrice: " + totalPrice);
+//        log.debug("after calculate");
+//        log.debug("price: " + calcMoney);
         int button;
-        System.out.println("사용자가 가지고 있는 액수 : " + userMoney);
+        log.debug("사용자가 가지고 있는 액수 : " + userMoney);
 
         while (!end) {
             printMenu();
             button = in.nextInt();
             printMenu();
             if (userMoney < 0) {
-                System.out.println("액수가 부족합니다.");
+                log.debug("액수가 부족합니다.");
                 end = true;
             }
             if (button == 1) {
@@ -61,15 +61,14 @@ public class SampleController {
 	    }
             else if (button == 0) {
                 end = true;
-                System.out.println("구매금액 : " + totalPrice + " 잔액 : " + userMoney);
-                System.out.println("이용해주셔서 감사합니다.");
+                log.debug("구매금액 : " + totalPrice + " 잔액 : " + userMoney);
+                log.debug("이용해주셔서 감사합니다.");
             }
             else {
-                System.out.println("올바른 명령어를 입력하세요");
+                log.debug("올바른 명령어를 입력하세요");
             }
 
         }
-	//add commentssssssssss
 
     }
 
@@ -84,13 +83,13 @@ public class SampleController {
     }
 
     private static void printMenu(){
-        System.out.println("---------------------------");
-        System.out.println("1.콜라 1000");
-        System.out.println("2.환타 1500");
-        System.out.println("3.사이다 1300");
-        System.out.println("4.포카리스웨트 1000");
-        System.out.println("5.조지아 1600");
-        System.out.println("---------------------------");
+        log.debug("---------------------------");
+        log.debug("1.콜라 1000");
+        log.debug("2.환타 1500");
+        log.debug("3.사이다 1300");
+        log.debug("4.포카리스웨트 1000");
+        log.debug("5.조지아 1600");
+        log.debug("---------------------------");
     }
 
     public static int calcTotalPrice(int price, int number){
