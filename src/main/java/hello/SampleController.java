@@ -52,17 +52,13 @@ public class SampleController {
                 userMoney = calcUserMoney(userMoney, totalPrice);
             }
             else if (button == 3) {
-                totalPrice += calcTotalPrice(1300, 1);
-                userMoney = calcUserMoney(userMoney, totalPrice);
-            }
+              totalPrice += calcTotalPrice(1000,1);
+              userMoney = calcUserMoney(userMoney, totalPrice);
+      	    }
             else if (button == 4) {
                 totalPrice += calcTotalPrice(1000, 1);
                 userMoney = calcUserMoney(userMoney, totalPrice);
-            }
-            else if (button == 5) {
-                totalPrice += calcTotalPrice(1000, 1);
-                userMoney = calcUserMoney(userMoney, totalPrice);
-            }
+            }      
             else if (button == 0) {
                 end = true;
                 System.out.println("구매금액 : " + totalPrice + " 잔액 : " + userMoney);
@@ -73,8 +69,7 @@ public class SampleController {
             }
 
         }
-
-
+	//add commentssssssssss
 
     }
 
