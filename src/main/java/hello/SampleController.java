@@ -64,6 +64,10 @@ public class SampleController {
                 System.out.println("구매금액 : " + totalPrice + " 잔액 : " + userMoney);
                 System.out.println("이용해주셔서 감사합니다.");
             }
+	    else if (button == 5) {
+		totalPrice += calcTotalPrice(1000,1);
+		userMoney = calcUserMoney(userMoney, totalPrice);
+	    }
             else {
                 System.out.println("올바른 명령어를 입력하세요");
             }
